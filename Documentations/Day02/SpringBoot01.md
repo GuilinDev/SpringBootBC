@@ -7,7 +7,7 @@
 
 ### 1-2 Spring Boot 2.0之更新 - 上
 * 基础环境升级
-    *最低JDK8， Jetty9.4， Tomcat8.5，Flyway5，Hibernate5.2， Gradle3.4， Thymeleaf 3.0
+    * 最低JDK8， Jetty9.4， Tomcat8.5，Flyway5，Hibernate5.2， Gradle3.4， Thymeleaf 3.0
 * 默认组件升级
     * HikariCP - JDBC 连接池
     * Security - 与Shiro对比
