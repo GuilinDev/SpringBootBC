@@ -36,7 +36,8 @@ public class PropertiesTest {
 
     @Test
     public void testOther() throws Exception {
+        //.yml文件取不到值，.properties文件可以，why?
         System.out.println("title: " + otherProperties.getTitle());
-        System.out.println("description: " + otherProperties.getDescription());
+        System.out.println("blog: " + otherProperties.getBlog());
     }
 }

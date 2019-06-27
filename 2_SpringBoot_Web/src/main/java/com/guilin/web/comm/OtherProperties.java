@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @PropertySource("classpath:other.yml")
 public class OtherProperties {
     private String title;
-    private String description;
+    private String blog;
 
     public String getTitle() {
         return title;
@@ -19,11 +19,11 @@ public class OtherProperties {
         this.title = title;
     }
 
-    public String getDescription() {
-        return description;
+    public String getBlog() {
+        return blog;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setBlog(String blog) {
+        this.blog = blog;
     }
 }
