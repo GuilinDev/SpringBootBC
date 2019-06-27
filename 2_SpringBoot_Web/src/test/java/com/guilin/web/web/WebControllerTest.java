@@ -30,4 +30,11 @@ public class WebControllerTest {
                 .andReturn().getResponse().getContentAsString();
         System.out.println("result: " + responseString);
     }
+
+//    @Test
+//    public void get() throws Exception {
+//        String responseString = mockMvc.perform(MockMvcRequestBuilders.get("/get"))
+//                .andReturn().getResponse().getContentAsString();
+//        System.out.println("result: " + responseString);
+//    }
 }
