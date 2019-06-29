@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Example If/Unless </title>
 </head>
 <body>
-$END$
+    <div>
+        <h1>If/Unless</h1>
+        <a th:if="${flag == 'yes'}" th:href="@{http://google.com}"> home </a>
+        <br>
+        <a th:unless = "@{flag != 'no'}" th:href="@{www.guilindev.xyz}" >guilindev.xyz</a>
+    </div>
 </body>
 </html>
