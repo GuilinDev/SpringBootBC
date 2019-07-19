@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5a2f25d-74ad-4c68-b26f-81f2b5815b1f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="070bdba6-a8d7-45d7-baf8-aa695fd55a62" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-boot-test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot-test/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -12,7 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="-966119630">
+    <session id="-1490339978">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="1" />
@@ -22,32 +25,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="2" />
+          <entry key="properties" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="2" />
+          <entry key="Properties" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/neo/simple/HelloTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/neo/web/HelloWebTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            <state relative-caret-position="400">
+              <caret line="20" column="55" lean-forward="true" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -84,72 +78,73 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="spring-boot-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-boot-test" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-boot-package" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-boot-package" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="spring-boot-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-boot-test" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-boot-package" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-boot-package" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="spring-boot-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-boot-test" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-boot-package" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-boot-package" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-boot-package" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-boot-package" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-boot-package" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-boot-package" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="neo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-boot-package" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-boot-package" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-boot-package" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-boot-package" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="spring-boot-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-boot-test" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-boot-package" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-boot-package" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="spring-boot-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-boot-test" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-boot-package" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-boot-package" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="neo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-boot-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-boot-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="neo" type="462c0819:PsiDirectoryNode" />
-              <item name="junit" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-boot-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-boot-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="neo" type="462c0819:PsiDirectoryNode" />
-              <item name="simple" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-boot-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-boot-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="neo" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -170,61 +165,31 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.HelloTest.hello">
-    <configuration name="HelloTest.hello" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring-boot-test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.neo.simple.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.neo.simple" />
-      <option name="MAIN_CLASS_NAME" value="com.neo.simple.HelloTest" />
-      <option name="METHOD_NAME" value="hello" />
-      <option name="TEST_OBJECT" value="method" />
+  <component name="RunManager">
+    <configuration name="PackageApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-package" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.neo.PackageApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="spring-boot-test" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.neo.TestApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Spring Boot.TestApplication" />
-      <item itemvalue="JUnit.HelloTest.hello" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.HelloTest.hello" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f5a2f25d-74ad-4c68-b26f-81f2b5815b1f" name="Default Changelist" comment="" />
-      <created>1563406229640</created>
+      <changelist id="070bdba6-a8d7-45d7-baf8-aa695fd55a62" name="Default Changelist" comment="" />
+      <created>1563411955141</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1563406229640</updated>
-      <workItem from="1563406231139" duration="1275000" />
+      <updated>1563411955141</updated>
+      <workItem from="1563411956447" duration="748000" />
     </task>
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="HelloTest_hello - 2019.07.17 at 20h 56m 17s.xml">
-      <configuration name="HelloTest.hello" configurationId="JUnit" />
-    </history-entry>
-  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1275000" />
+    <option name="totallyTimeSpent" value="748000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -235,7 +200,6 @@
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Java Enterprise" />
@@ -244,7 +208,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -266,17 +230,10 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/neo/simple/HelloTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/neo/web/HelloWebTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        <state relative-caret-position="400">
+          <caret line="20" column="55" lean-forward="true" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
         </state>
       </provider>
     </entry>
