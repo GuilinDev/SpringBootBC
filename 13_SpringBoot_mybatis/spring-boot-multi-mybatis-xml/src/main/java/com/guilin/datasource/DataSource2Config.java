@@ -16,7 +16,7 @@ import javax.sql.DataSource;
 
 
 @Configuration
-@MapperScan(basePackages = "com.guilin.mapper.two", sqlSessionTemplateRef  = "twoSqlSessionTemplate")
+@MapperScan(basePackages = "com.guilin.mapper.two", sqlSessionTemplateRef = "twoSqlSessionTemplate")
 public class DataSource2Config {
 
     @Bean(name = "twoDataSource")

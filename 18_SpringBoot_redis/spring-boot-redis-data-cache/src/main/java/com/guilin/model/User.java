@@ -27,6 +27,7 @@ public class User implements Serializable {
     public User() {
         super();
     }
+
     public User(String email, String nickname, String password, String userName, String regTime) {
         super();
         this.email = email;
@@ -35,15 +36,19 @@ public class User implements Serializable {
         this.userName = userName;
         this.regTime = regTime;
     }
+
     public Long getId() {
         return id;
     }
+
     public void setId(Long id) {
         this.id = id;
     }
+
     public String getUserName() {
         return userName;
     }
+
     public void setUserName(String userName) {
         this.userName = userName;
     }
@@ -59,6 +64,7 @@ public class User implements Serializable {
     public String getEmail() {
         return email;
     }
+
     public void setEmail(String email) {
         this.email = email;
     }
@@ -74,6 +80,7 @@ public class User implements Serializable {
     public String getRegTime() {
         return regTime;
     }
+
     public void setRegTime(String regTime) {
         this.regTime = regTime;
     }

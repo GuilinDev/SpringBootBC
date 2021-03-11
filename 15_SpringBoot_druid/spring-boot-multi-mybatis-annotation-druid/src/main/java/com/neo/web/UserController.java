@@ -15,49 +15,49 @@ import com.neo.model.User;
 
 @RestController
 public class UserController {
-	
-	@Autowired
-	private UserOneMapper userOneMapper;
+
+    @Autowired
+    private UserOneMapper userOneMapper;
 
     @Autowired
     private UserTwoMapper userTwoMapper;
-	
-	@RequestMapping("/getUsers")
-	public List<User> getUsers() {
-        List<User> usersOne=userOneMapper.getAll();
-        List<User> usersTwo=userTwoMapper.getAll();
+
+    @RequestMapping("/getUsers")
+    public List<User> getUsers() {
+        List<User> usersOne = userOneMapper.getAll();
+        List<User> usersTwo = userTwoMapper.getAll();
         usersOne.addAll(usersTwo);
-		return usersOne;
-	}
+        return usersOne;
+    }
 
     @RequestMapping("/getList")
     public Page<User> getList(UserParam userParam) {
-        List<User> users=userOneMapper.getList(userParam);
-        long count=userOneMapper.getCount(userParam);
-        Page page = new Page(userParam,count,users);
+        List<User> users = userOneMapper.getList(userParam);
+        long count = userOneMapper.getCount(userParam);
+        Page page = new Page(userParam, count, users);
         return page;
     }
 
     @RequestMapping("/getUser")
     public User getUser(Long id) {
-    	User user=userTwoMapper.getOne(id);
+        User user = userTwoMapper.getOne(id);
         return user;
     }
-    
+
     @RequestMapping("/add")
     public void save(User user) {
         userOneMapper.insert(user);
     }
-    
-    @RequestMapping(value="update")
+
+    @RequestMapping(value = "update")
     public void update(User user) {
         userOneMapper.update(user);
     }
-    
-    @RequestMapping(value="/delete/{id}")
+
+    @RequestMapping(value = "/delete/{id}")
     public void delete(@PathVariable("id") Long id) {
         userTwoMapper.delete(id);
     }
-    
-    
+
+
 }

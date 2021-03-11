@@ -17,7 +17,7 @@ public class UserTemplateTest {
 
     @Test
     public void testSaveUser() throws Exception {
-        User user=new User();
+        User user = new User();
         user.setId(2l);
         user.setUserName("小明");
         user.setPassWord("fffooo123");
@@ -25,14 +25,14 @@ public class UserTemplateTest {
     }
 
     @Test
-    public void findUserByUserName(){
-        User user= userRepository.findUserByUserName("小明");
-        System.out.println("user is "+user);
+    public void findUserByUserName() {
+        User user = userRepository.findUserByUserName("小明");
+        System.out.println("user is " + user);
     }
 
     @Test
-    public void updateUser(){
-        User user=new User();
+    public void updateUser() {
+        User user = new User();
         user.setId(2l);
         user.setUserName("天空");
         user.setPassWord("fffxxxx");
@@ -40,7 +40,7 @@ public class UserTemplateTest {
     }
 
     @Test
-    public void deleteUserById(){
+    public void deleteUserById() {
         userRepository.deleteUserById(1L);
     }
 

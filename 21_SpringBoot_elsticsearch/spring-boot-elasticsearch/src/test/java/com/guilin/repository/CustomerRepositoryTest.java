@@ -36,18 +36,18 @@ public class CustomerRepositoryTest {
 
     @Test
     public void saveCustomers() {
-        repository.save(new Customer("Alice", "北京",13));
-        repository.save(new Customer("Bob", "北京",23));
-        repository.save(new Customer("neo", "西安",30));
-        repository.save(new Customer("summer", "烟台",22));
+        repository.save(new Customer("Alice", "北京", 13));
+        repository.save(new Customer("Bob", "北京", 23));
+        repository.save(new Customer("neo", "西安", 30));
+        repository.save(new Customer("summer", "烟台", 22));
     }
 
     @Test
     public void fetchAllCustomers() {
         System.out.println("Customers found with findAll():");
         System.out.println("-------------------------------");
-        Iterable<Customer> iterable=repository.findAll();
-        for (Customer customer :iterable) {
+        Iterable<Customer> iterable = repository.findAll();
+        for (Customer customer : iterable) {
             System.out.println(customer);
         }
     }
@@ -60,11 +60,11 @@ public class CustomerRepositoryTest {
 
     @Test
     public void updateCustomers() {
-        Customer customer= repository.findByUserName("summer");
+        Customer customer = repository.findByUserName("summer");
         System.out.println(customer);
         customer.setAddress("北京市海淀区西直门");
         repository.save(customer);
-        Customer xcustomer=repository.findByUserName("summer");
+        Customer xcustomer = repository.findByUserName("summer");
         System.out.println(xcustomer);
     }
 
@@ -75,7 +75,7 @@ public class CustomerRepositoryTest {
         System.out.println(repository.findByUserName("summer"));
         System.out.println("--------------------------------");
         System.out.println("Customers found with findByAddress(\"北京\"):");
-        String q="北京";
+        String q = "北京";
         for (Customer customer : repository.findByAddress(q)) {
             System.out.println(customer);
         }
@@ -87,8 +87,8 @@ public class CustomerRepositoryTest {
         System.out.println("-------------------------------");
         Sort sort = new Sort(Sort.Direction.DESC, "address.keyword");
         Pageable pageable = PageRequest.of(0, 10, sort);
-        Page<Customer> customers=repository.findByAddress("北京", pageable);
-        System.out.println("Page customers "+customers.getContent().toString());
+        Page<Customer> customers = repository.findByAddress("北京", pageable);
+        System.out.println("Page customers " + customers.getContent().toString());
     }
 
     @Test
@@ -98,9 +98,9 @@ public class CustomerRepositoryTest {
         QueryBuilder customerQuery = QueryBuilders.boolQuery()
                 .must(QueryBuilders.matchQuery("address", "北京"));
         Page<Customer> page = repository.search(customerQuery, PageRequest.of(0, 10));
-        System.out.println("Page customers "+page.getContent().toString());
+        System.out.println("Page customers " + page.getContent().toString());
         page = repository.search(customerQuery, PageRequest.of(1, 10));
-        System.out.println("Page customers "+page.getContent().toString());
+        System.out.println("Page customers " + page.getContent().toString());
     }
 
     @Test
@@ -129,7 +129,7 @@ public class CustomerRepositoryTest {
         Map<String, Aggregation> aggregationMap = aggregations.asMap();
         //获得对应的聚合函数的聚合子类，该聚合子类也是个map集合,里面的value就是桶Bucket，我们要获得Bucket
         InternalSum sumAge = (InternalSum) aggregationMap.get("sumAge");
-        System.out.println("sum age is "+sumAge.getValue());
+        System.out.println("sum age is " + sumAge.getValue());
     }
 
 }

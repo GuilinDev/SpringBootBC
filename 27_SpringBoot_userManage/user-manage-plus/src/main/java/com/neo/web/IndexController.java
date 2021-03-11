@@ -100,7 +100,7 @@ public class IndexController {
 
     @RequestMapping("/register")
     public String register(@Valid RegisterParam registerParam, BindingResult result, ModelMap model) {
-        logger.info("register param"+ registerParam.toString());
+        logger.info("register param" + registerParam.toString());
         String errorMsg = "";
         if (result.hasErrors()) {
             List<ObjectError> list = result.getAllErrors();
@@ -122,7 +122,7 @@ public class IndexController {
         user.setState("unverified");
         userRepository.save(user);
         sendRegisterMail(user);
-        logger.info("register user "+ user.toString());
+        logger.info("register user " + user.toString());
         return "login";
     }
 
@@ -145,12 +145,12 @@ public class IndexController {
 
 
     @RequestMapping("/verified/{id}")
-    public String verified(@PathVariable("id") String id,ModelMap model) {
-        User user=userRepository.findById(id).get();
-        if (user!=null && "unverified".equals(user.getState())){
+    public String verified(@PathVariable("id") String id, ModelMap model) {
+        User user = userRepository.findById(id).get();
+        if (user != null && "unverified".equals(user.getState())) {
             user.setState("verified");
             userRepository.save(user);
-            model.put("userName",user.getUserName());
+            model.put("userName", user.getUserName());
         }
         return "verified";
     }

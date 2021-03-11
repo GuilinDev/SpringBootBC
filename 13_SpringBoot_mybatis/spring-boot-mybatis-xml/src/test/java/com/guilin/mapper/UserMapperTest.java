@@ -22,11 +22,11 @@ public class UserMapperTest {
 
 
     @Test
-    public void testUser()  {
+    public void testUser() {
         //增加
         userMapper.insert(new User("aa", "a123456", UserSexEnum.MAN));
         //删除
-        int count=userMapper.delete(2l);
+        int count = userMapper.delete(2l);
         User user = userMapper.getOne(1l);
         user.setNickName("smile");
         //修改
@@ -36,7 +36,7 @@ public class UserMapperTest {
     }
 
     @Test
-    public void testInsert()  {
+    public void testInsert() {
         userMapper.insert(new User("aa", "admin_root", UserSexEnum.MAN));
         userMapper.insert(new User("bb", "admin_root", UserSexEnum.WOMAN));
         userMapper.insert(new User("cc", "admin_root", UserSexEnum.WOMAN));
@@ -48,35 +48,35 @@ public class UserMapperTest {
     @Test
     public void testQuery() {
         List<User> users = userMapper.getAll();
-        if(users==null || users.size()==0){
+        if (users == null || users.size() == 0) {
             System.out.println("is null");
-        }else{
-            System.out.println("users list is :"+users.toString());
+        } else {
+            System.out.println("users list is :" + users.toString());
         }
     }
 
 
     @Test
     public void testUpdate() {
-        long id=1l;
+        long id = 1l;
         User user = userMapper.getOne(id);
-        if(user!=null){
+        if (user != null) {
             System.out.println(user.toString());
             user.setNickName("neo");
             userMapper.update(user);
             Assert.assertTrue(("neo".equals(userMapper.getOne(id).getNickName())));
-        }else {
-            System.out.println("not find user id="+id);
+        } else {
+            System.out.println("not find user id=" + id);
         }
     }
 
 
     @Test
     public void testDelete() {
-        int count=userMapper.delete(7l);
-        if(count>0){
+        int count = userMapper.delete(7l);
+        if (count > 0) {
             System.out.println("delete is sucess");
-        }else {
+        } else {
             System.out.println("delete if failed");
         }
     }
@@ -84,12 +84,12 @@ public class UserMapperTest {
 
     @Test
     public void testPage() {
-        UserParam userParam=new UserParam();
+        UserParam userParam = new UserParam();
 //		userParam.setUserSex("WOMAN");
         userParam.setCurrentPage(0);//0 是第一页，1 是第二页 依次类推
-        List<User> users=userMapper.getList(userParam);
-        long count=userMapper.getCount(userParam);
-        Page page = new Page(userParam,count,users);
-        System.out.println("page == " +page);
+        List<User> users = userMapper.getList(userParam);
+        long count = userMapper.getCount(userParam);
+        Page page = new Page(userParam, count, users);
+        System.out.println("page == " + page);
     }
 }

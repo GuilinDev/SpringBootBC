@@ -19,7 +19,7 @@ public class UserController {
     private UserRepository userRepository;
 
     @RequestMapping(value = "/setSession")
-    public Map<String, Object> setSession (HttpServletRequest request){
+    public Map<String, Object> setSession(HttpServletRequest request) {
         Map<String, Object> map = new HashMap<>();
         request.getSession().setAttribute("message", request.getRequestURL());
         map.put("request Url", request.getRequestURL());
@@ -27,7 +27,7 @@ public class UserController {
     }
 
     @RequestMapping(value = "/getSession")
-    public Object getSession (HttpServletRequest request){
+    public Object getSession(HttpServletRequest request) {
         Map<String, Object> map = new HashMap<>();
         map.put("sessionId", request.getSession().getId());
         map.put("message", request.getSession().getAttribute("message"));
@@ -36,28 +36,28 @@ public class UserController {
 
 
     @RequestMapping(value = "/index")
-    public String index (HttpServletRequest request){
-        String msg="index content";
-        Object user= request.getSession().getAttribute("user");
-        if (user==null){
-            msg="please login first！";
+    public String index(HttpServletRequest request) {
+        String msg = "index content";
+        Object user = request.getSession().getAttribute("user");
+        if (user == null) {
+            msg = "please login first！";
         }
         return msg;
     }
 
     @RequestMapping(value = "/login")
-    public String login (HttpServletRequest request,String userName,String password){
-        String msg="logon failure!";
-        User user= userRepository.findByUserName(userName);
-        if (user!=null && user.getPassword().equals(password)){
-            request.getSession().setAttribute("user",user);
-            msg="login successful!";
+    public String login(HttpServletRequest request, String userName, String password) {
+        String msg = "logon failure!";
+        User user = userRepository.findByUserName(userName);
+        if (user != null && user.getPassword().equals(password)) {
+            request.getSession().setAttribute("user", user);
+            msg = "login successful!";
         }
         return msg;
     }
 
     @RequestMapping(value = "/loginout")
-    public String loginout (HttpServletRequest request){
+    public String loginout(HttpServletRequest request) {
         request.getSession().removeAttribute("user");
         return "loginout successful!";
     }

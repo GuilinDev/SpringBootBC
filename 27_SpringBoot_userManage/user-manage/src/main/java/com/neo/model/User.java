@@ -4,7 +4,7 @@ package com.neo.model;
 import java.io.Serializable;
 import java.util.Date;
 
-public class User implements Serializable{
+public class User implements Serializable {
     private String id;
     private String userName;
     private String userType;

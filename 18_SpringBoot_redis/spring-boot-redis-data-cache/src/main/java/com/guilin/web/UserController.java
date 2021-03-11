@@ -18,45 +18,45 @@ public class UserController {
     private UserRepository userRepository;
 
     @RequestMapping("/hello")
-    @Cacheable(value="helloCache")
+    @Cacheable(value = "helloCache")
     public String hello(String name) {
         System.out.println("没有走缓存！");
-        return "hello "+name;
+        return "hello " + name;
     }
 
     @RequestMapping("/condition")
-    @Cacheable(value="condition",condition="#name.length() <= 4")
+    @Cacheable(value = "condition", condition = "#name.length() <= 4")
     public String condition(String name) {
         System.out.println("没有走缓存！");
-        return "hello "+name;
+        return "hello " + name;
     }
 
     @RequestMapping("/getUsers")
-    @Cacheable(value="usersCache",key="#nickname",condition="#nickname.length() >= 6")
+    @Cacheable(value = "usersCache", key = "#nickname", condition = "#nickname.length() >= 6")
     public List<User> getUsers(String nickname) {
-        List<User> users=userRepository.findByNickname(nickname);
+        List<User> users = userRepository.findByNickname(nickname);
         System.out.println("执行了数据库操作");
         return users;
     }
 
     @RequestMapping("/getPutUsers")
-    @CachePut(value="usersCache",key="#nickname")
+    @CachePut(value = "usersCache", key = "#nickname")
     public List<User> getPutUsers(String nickname) {
-        List<User> users=userRepository.findByNickname(nickname);
+        List<User> users = userRepository.findByNickname(nickname);
         System.out.println("执行了数据库操作");
         return users;
     }
 
     @RequestMapping("/allEntries")
-    @CacheEvict(value="usersCache", allEntries=true)
-    public String  allEntries(String nickname) {
-        String msg="执行了allEntries";
+    @CacheEvict(value = "usersCache", allEntries = true)
+    public String allEntries(String nickname) {
+        String msg = "执行了allEntries";
         System.out.println(msg);
         return msg;
     }
 
     @RequestMapping("/beforeInvocation")
-    @CacheEvict(value="usersCache", allEntries=true, beforeInvocation=true)
+    @CacheEvict(value = "usersCache", allEntries = true, beforeInvocation = true)
     public void beforeInvocation() {
         throw new RuntimeException("test beforeInvocation");
     }

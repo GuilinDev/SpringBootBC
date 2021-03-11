@@ -23,12 +23,12 @@ public class UserSql {
         }
         sql.append(" order by id desc");
         sql.append(" limit " + userParam.getBeginLine() + "," + userParam.getPageSize());
-        log.info("getList sql is :" +sql.toString());
+        log.info("getList sql is :" + sql.toString());
         return sql.toString();
     }
 
     public String getCount(UserParam userParam) {
-        String sql= new SQL(){{
+        String sql = new SQL() {{
             SELECT("count(1)");
             FROM("users");
             if (!StringUtils.isEmpty(userParam.getUserName())) {
@@ -40,7 +40,7 @@ public class UserSql {
             //从这个toString可以看出，其内部使用高效的StringBuilder实现SQL拼接
         }}.toString();
 
-        log.info("getCount sql is :" +sql);
+        log.info("getCount sql is :" + sql);
         return sql;
     }
 }

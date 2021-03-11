@@ -19,7 +19,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
     @Transactional(timeout = 10)
     @Modifying
     @Query("update User set userName = ?1 where id = ?2")
-    int modifyById(String  userName, Long id);
+    int modifyById(String userName, Long id);
 
     @Transactional
     @Modifying

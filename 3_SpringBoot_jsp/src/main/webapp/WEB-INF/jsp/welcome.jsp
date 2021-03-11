@@ -2,7 +2,7 @@
 <html lang="en">
 
 <body>
-Time:  ${time}
+Time: ${time}
 <br>
 Message: ${message}
 </body>

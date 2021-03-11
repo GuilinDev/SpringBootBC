@@ -32,7 +32,7 @@ public class HelloWebTest {
     public void testHello() throws Exception {
         mockMvc.perform(
                 MockMvcRequestBuilders.post("/hello")
-                .accept(MediaType.APPLICATION_JSON_UTF8))
+                        .accept(MediaType.APPLICATION_JSON_UTF8))
 //                .andDo(print())
 //                .andExpect(content().string(equalTo("hello web")));
                 .andExpect(content().string(containsString("hello")));
@@ -45,11 +45,12 @@ public class HelloWebTest {
         params.add("id", "6");
         params.add("hello", "world");
         mockMvc.perform(
-                 MockMvcRequestBuilders.post("/hello")
-                .params(params)
-                 .contentType(MediaType.APPLICATION_JSON_UTF8)
-                .accept(MediaType.APPLICATION_JSON_UTF8))
+                MockMvcRequestBuilders.post("/hello")
+                        .params(params)
+                        .contentType(MediaType.APPLICATION_JSON_UTF8)
+                        .accept(MediaType.APPLICATION_JSON_UTF8))
                 .andExpect(status().isOk())
-                .andExpect(content().string(containsString("hello")));;
+                .andExpect(content().string(containsString("hello")));
+        ;
     }
 }

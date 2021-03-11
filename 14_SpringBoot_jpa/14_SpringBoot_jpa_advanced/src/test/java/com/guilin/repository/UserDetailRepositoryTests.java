@@ -24,7 +24,7 @@ public class UserDetailRepositoryTests {
 
     @Test
     public void testSaveAddress() {
-        Address address=new Address();
+        Address address = new Address();
         address.setUserId(1L);
         address.setCity("北京");
         address.setProvince("北京");
@@ -37,7 +37,7 @@ public class UserDetailRepositoryTests {
         Date date = new Date();
         DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
         String formattedDate = dateFormat.format(date);
-        UserDetail userDetail=new UserDetail();
+        UserDetail userDetail = new UserDetail();
         userDetail.setUserId(3L);
         userDetail.setHobby("吃鸡游戏");
         userDetail.setAge(28);
@@ -46,10 +46,10 @@ public class UserDetailRepositoryTests {
     }
 
     @Test
-    public void testUserInfo()  {
-        List<UserInfo> userInfos=userDetailRepository.findUserInfo("钓鱼");
-        for (UserInfo userInfo:userInfos){
-            System.out.println("userInfo: "+userInfo.getUserName()+"-"+userInfo.getEmail()+"-"+userInfo.getHobby()+"-"+userInfo.getIntroduction());
+    public void testUserInfo() {
+        List<UserInfo> userInfos = userDetailRepository.findUserInfo("钓鱼");
+        for (UserInfo userInfo : userInfos) {
+            System.out.println("userInfo: " + userInfo.getUserName() + "-" + userInfo.getEmail() + "-" + userInfo.getHobby() + "-" + userInfo.getIntroduction());
         }
     }
 }

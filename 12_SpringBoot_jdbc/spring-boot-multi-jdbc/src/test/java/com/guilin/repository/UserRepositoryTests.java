@@ -20,7 +20,7 @@ public class UserRepositoryTests {
 
     @Test
     public void testSave() {
-        User user = new User("clark","admin_root",23);
+        User user = new User("clark", "admin_root", 23);
         userRepository.save(user, primaryJdbcTemplate);
         userRepository.save(user, secondaryJdbcTemplate);
     }

@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController
 public class WebController {
-    @RequestMapping(name="/getUser", method= RequestMethod.POST)
+    @RequestMapping(name = "/getUser", method = RequestMethod.POST)
     public User getUser() {
         User user = new User();
         user.setName("小明");

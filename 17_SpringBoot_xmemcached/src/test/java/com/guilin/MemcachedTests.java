@@ -67,14 +67,14 @@ public class MemcachedTests {
 
     @Test
     public void testCounter() throws Exception {
-        Counter counter=memcachedClient.getCounter("counter1",10);
-        System.out.println("counter="+counter.get());
-        long c1 =counter.incrementAndGet();
-        System.out.println("counter="+c1);
-        long c2 =counter.decrementAndGet();
-        System.out.println("counter="+c2);
-        long c3 =counter.addAndGet(-6);
-        System.out.println("counter="+c3);
+        Counter counter = memcachedClient.getCounter("counter1", 10);
+        System.out.println("counter=" + counter.get());
+        long c1 = counter.incrementAndGet();
+        System.out.println("counter=" + c1);
+        long c2 = counter.decrementAndGet();
+        System.out.println("counter=" + c2);
+        long c3 = counter.addAndGet(-6);
+        System.out.println("counter=" + c3);
     }
 
 
@@ -85,7 +85,7 @@ public class MemcachedTests {
         //memcached 不支持
         //	memcachedClient.touch("Touch",6);
         Thread.sleep(2000);
-        String value =memcachedClient.get("Touch",3000);
+        String value = memcachedClient.get("Touch", 3000);
         System.out.println("Touch=" + value);
     }
 
@@ -93,14 +93,14 @@ public class MemcachedTests {
     public void testCas() throws Exception {
         memcachedClient.set("cas", 0, 100);
         GetsResponse<Integer> result = memcachedClient.gets("cas");
-        System.out.println("result value "+result.getValue());
+        System.out.println("result value " + result.getValue());
 
         long cas = result.getCas();
         //尝试将a的值更新为2
         if (!memcachedClient.cas("cas", 0, 200, cas)) {
             System.err.println("cas error");
         }
-        System.out.println("cas value "+memcachedClient.get("cas"));
+        System.out.println("cas value " + memcachedClient.get("cas"));
 
         memcachedClient.cas("cas", 0, new CASOperation<Integer>() {
             public int getMaxTries() {
@@ -111,15 +111,15 @@ public class MemcachedTests {
                 return 300;
             }
         });
-        System.out.println("cas value "+memcachedClient.get("cas"));
+        System.out.println("cas value " + memcachedClient.get("cas"));
 
     }
 
     @Test
     public void testStat() throws Exception {
-        Map<InetSocketAddress,Map<String,String>> result=memcachedClient.getStats();
+        Map<InetSocketAddress, Map<String, String>> result = memcachedClient.getStats();
         System.out.println("Stats=" + result.toString());
-        Map<InetSocketAddress,Map<String,String>> items=memcachedClient.getStatsByItem("items");
+        Map<InetSocketAddress, Map<String, String>> items = memcachedClient.getStatsByItem("items");
         System.out.println("items=" + items.toString());
     }
 

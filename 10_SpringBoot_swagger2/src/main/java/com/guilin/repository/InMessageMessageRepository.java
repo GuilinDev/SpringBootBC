@@ -39,7 +39,7 @@ public class InMessageMessageRepository implements MessageRepository {
 
     @Override
     public Message updateText(Message message) {
-        Message msg=this.messages.get(message.getId());
+        Message msg = this.messages.get(message.getId());
         msg.setText(message.getText());
         this.messages.put(msg.getId(), msg);
         return msg;

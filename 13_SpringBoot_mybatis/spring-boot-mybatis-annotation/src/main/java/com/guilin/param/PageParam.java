@@ -5,10 +5,10 @@ package com.guilin.param;
 public class PageParam {
     private int beginLine;       //起始行
     private Integer pageSize = 3;
-    private Integer currentPage=0; 	   // 当前页
+    private Integer currentPage = 0;       // 当前页
 
     public int getBeginLine() {
-        return pageSize*currentPage;
+        return pageSize * currentPage;
     }
 
     public Integer getPageSize() {

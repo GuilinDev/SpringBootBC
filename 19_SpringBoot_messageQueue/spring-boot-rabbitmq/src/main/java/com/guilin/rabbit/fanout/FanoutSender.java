@@ -13,7 +13,7 @@ public class FanoutSender {
     public void send() {
         String context = "hi, fanout msg ";
         System.out.println("Sender : " + context);
-        this.rabbitTemplate.convertAndSend("fanoutExchange","", context);
+        this.rabbitTemplate.convertAndSend("fanoutExchange", "", context);
     }
 
 }

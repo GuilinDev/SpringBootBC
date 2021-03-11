@@ -9,37 +9,38 @@ import java.util.Map;
 
 @Component
 public class Calculation {
-  
-   public int add(int a, int b) {
 
-      return a + b;
-   }
+    public int add(int a, int b) {
 
-   public int sub(int a, int b) {
+        return a + b;
+    }
 
-      return a - b;
-   }
-   public double div(double a, double b) {
+    public int sub(int a, int b) {
 
-      return a / b;
-   }
+        return a - b;
+    }
 
-   public String getName(String name) {
+    public double div(double a, double b) {
 
-      return name;
-   }
+        return a / b;
+    }
 
-   public List<String> getList(String item) {
+    public String getName(String name) {
 
-      List<String> l = new ArrayList<String>();
-      l.add(item);
-      return l;
-   }
+        return name;
+    }
 
-   public Map<String, String> getMap(String key, String value) {
+    public List<String> getList(String item) {
 
-      Map<String, String> m = new HashMap<String, String>();
-      m.put(key, value);
-      return m;
-   }
+        List<String> l = new ArrayList<String>();
+        l.add(item);
+        return l;
+    }
+
+    public Map<String, String> getMap(String key, String value) {
+
+        Map<String, String> m = new HashMap<String, String>();
+        m.put(key, value);
+        return m;
+    }
 }  

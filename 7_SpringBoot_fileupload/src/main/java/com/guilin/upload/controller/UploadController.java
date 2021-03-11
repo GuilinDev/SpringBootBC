@@ -44,6 +44,7 @@ public class UploadController {
         }
         return "redirect:/uploadStatus";
     }
+
     @PostMapping("/uploadMore")
     public String moreFileUpload(@RequestParam("file") MultipartFile[] files,
                                  RedirectAttributes redirectAttributes) {

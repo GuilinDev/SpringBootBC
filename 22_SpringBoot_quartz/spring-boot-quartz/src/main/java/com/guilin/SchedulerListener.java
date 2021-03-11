@@ -16,7 +16,7 @@ public class SchedulerListener {
     @Autowired
     public CronSchedulerJob scheduleJobs;
 
-    @Scheduled(cron="0 30 11 25 11 ?")
+    @Scheduled(cron = "0 30 11 25 11 ?")
     public void schedule() throws SchedulerException {
         scheduleJobs.scheduleJobs();
     }

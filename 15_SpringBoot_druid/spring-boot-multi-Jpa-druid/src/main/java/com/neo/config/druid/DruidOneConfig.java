@@ -5,8 +5,8 @@ import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties(prefix="spring.datasource.druid.one")
-public class DruidOneConfig  extends  DruidConfig{
+@ConfigurationProperties(prefix = "spring.datasource.druid.one")
+public class DruidOneConfig extends DruidConfig {
     private String url;
     private String username;
     private String password;

@@ -54,7 +54,7 @@
             </plugin>
             <!-- 热部署配置 -->
             <!--<configuration>-->
-                <!--<fork>true</fork>-->
+            <!--<fork>true</fork>-->
             <!--</configuration>-->
         </plugins>
     </build>

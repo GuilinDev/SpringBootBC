@@ -4,7 +4,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties(prefix="spring.datasource.druid")
+@ConfigurationProperties(prefix = "spring.datasource.druid")
 public class DruidConfig {
     protected String url;
     protected String username;

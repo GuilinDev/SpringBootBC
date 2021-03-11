@@ -8,6 +8,6 @@ public class Consumer2 {
 
     @JmsListener(destination = "guilin.queue")
     public void receiveQueue(String text) {
-        System.out.println("Consumer2 queue msg : "+text);
+        System.out.println("Consumer2 queue msg : " + text);
     }
 }

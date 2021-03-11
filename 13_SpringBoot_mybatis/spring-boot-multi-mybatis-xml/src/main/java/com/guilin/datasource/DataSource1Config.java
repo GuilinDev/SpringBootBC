@@ -17,7 +17,7 @@ import javax.sql.DataSource;
 
 
 @Configuration
-@MapperScan(basePackages = "com.guilin.mapper.one", sqlSessionTemplateRef  = "oneSqlSessionTemplate")
+@MapperScan(basePackages = "com.guilin.mapper.one", sqlSessionTemplateRef = "oneSqlSessionTemplate")
 public class DataSource1Config {
 
     @Bean(name = "oneDataSource")
@@ -45,7 +45,7 @@ public class DataSource1Config {
     @Bean(name = "oneSqlSessionTemplate")
     @Primary
     public SqlSessionTemplate testSqlSessionTemplate(@Qualifier("oneSqlSessionFactory")
-                                                                 SqlSessionFactory sqlSessionFactory)
+                                                             SqlSessionFactory sqlSessionFactory)
             throws Exception {
         return new SqlSessionTemplate(sqlSessionFactory);
     }

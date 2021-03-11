@@ -12,12 +12,12 @@ public class Consumer {
      * 当队列 guilin.queue 中有消息发送时会触发此方法的执行，text 为消息内容
      */
     public void receiveQueue(String text) {
-        System.out.println("Consumer queue msg : "+text);
+        System.out.println("Consumer queue msg : " + text);
     }
 
     @JmsListener(destination = "guilin.topic", containerFactory = "topicListenerFactory")
     public void receiveTopic(String text) {
-        System.out.println("Consumer topic msg : "+text);
+        System.out.println("Consumer topic msg : " + text);
     }
 
 }

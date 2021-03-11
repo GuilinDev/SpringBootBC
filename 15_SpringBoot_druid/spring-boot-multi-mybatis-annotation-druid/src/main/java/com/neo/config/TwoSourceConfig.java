@@ -12,7 +12,7 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import javax.sql.DataSource;
 
 @Configuration
-@MapperScan(basePackages = "com.neo.mapper.two", sqlSessionTemplateRef  = "twoSqlSessionTemplate")
+@MapperScan(basePackages = "com.neo.mapper.two", sqlSessionTemplateRef = "twoSqlSessionTemplate")
 public class TwoSourceConfig {
 
     @Bean(name = "twoSqlSessionFactory")

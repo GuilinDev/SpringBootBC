@@ -16,7 +16,7 @@ import javax.sql.DataSource;
 
 
 @Configuration
-@MapperScan(basePackages = "com.neo.mapper.test2", sqlSessionTemplateRef  = "test2SqlSessionTemplate")
+@MapperScan(basePackages = "com.neo.mapper.test2", sqlSessionTemplateRef = "test2SqlSessionTemplate")
 public class DataSource2Config {
 
     @Bean(name = "test2SqlSessionFactory")

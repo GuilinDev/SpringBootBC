@@ -8,7 +8,7 @@ import org.springframework.security.web.authentication.SavedRequestAwareAuthenti
 import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 
 @Configuration
-public  class SecuritySecureConfig extends WebSecurityConfigurerAdapter {
+public class SecuritySecureConfig extends WebSecurityConfigurerAdapter {
     private final String adminContextPath;
 
     public SecuritySecureConfig(AdminServerProperties adminServerProperties) {
@@ -23,19 +23,19 @@ public  class SecuritySecureConfig extends WebSecurityConfigurerAdapter {
         successHandler.setDefaultTargetUrl(adminContextPath + "/");
 
         http.authorizeRequests()
-            .antMatchers(adminContextPath + "/assets/**").permitAll() 
-            .antMatchers(adminContextPath + "/login").permitAll()
-            .anyRequest().authenticated() 
-            .and()
-        .formLogin().loginPage(adminContextPath + "/login").successHandler(successHandler).and() 
-        .logout().logoutUrl(adminContextPath + "/logout").and()
-        .httpBasic().and() 
-        .csrf()
-            .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
-            .ignoringAntMatchers(
-                adminContextPath + "/instances",   
-                adminContextPath + "/actuator/**"  
-            );
+                .antMatchers(adminContextPath + "/assets/**").permitAll()
+                .antMatchers(adminContextPath + "/login").permitAll()
+                .anyRequest().authenticated()
+                .and()
+                .formLogin().loginPage(adminContextPath + "/login").successHandler(successHandler).and()
+                .logout().logoutUrl(adminContextPath + "/logout").and()
+                .httpBasic().and()
+                .csrf()
+                .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
+                .ignoringAntMatchers(
+                        adminContextPath + "/instances",
+                        adminContextPath + "/actuator/**"
+                );
         // @formatter:on
     }
 }

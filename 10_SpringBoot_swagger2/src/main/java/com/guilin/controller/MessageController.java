@@ -17,13 +17,13 @@ import java.util.List;
 public class MessageController {
 
     @Autowired
-    private  MessageRepository messageRepository;
+    private MessageRepository messageRepository;
 
     @ApiOperation( //ApiOperation 定义在方法上，描述方法名、方法解释、返回信息、标记等信息。
             value = "消息列表",
             notes = "完整的消息内容列表",
-            produces="application/json, application/xml",
-            consumes="application/json, application/xml",
+            produces = "application/json, application/xml",
+            consumes = "application/json, application/xml",
             response = List.class)
     @GetMapping(value = "messages")
     public List<Message> list() {
@@ -44,7 +44,7 @@ public class MessageController {
     })
     @PostMapping(value = "message")
     public Message create(Message message) {
-        System.out.println("message===="+message.toString());
+        System.out.println("message====" + message.toString());
         message = this.messageRepository.save(message);
         return message;
     }
@@ -64,13 +64,13 @@ public class MessageController {
             @ApiResponse(code = 200, message = "服务器内部错误")
     })
     public Message modify(Message message) {
-        Message messageResult=this.messageRepository.update(message);
+        Message messageResult = this.messageRepository.update(message);
         return messageResult;
     }
 
-    @PatchMapping(value="/message/text")
+    @PatchMapping(value = "/message/text")
     public BaseResult<Message> patch(Message message) {
-        Message messageResult=this.messageRepository.updateText(message);
+        Message messageResult = this.messageRepository.updateText(message);
         return BaseResult.successWithData(messageResult);
     }
 

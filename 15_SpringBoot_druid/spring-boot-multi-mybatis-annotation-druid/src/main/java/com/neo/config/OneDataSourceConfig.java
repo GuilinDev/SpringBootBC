@@ -13,7 +13,7 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import javax.sql.DataSource;
 
 @Configuration
-@MapperScan(basePackages = "com.neo.mapper.one", sqlSessionTemplateRef  = "oneSqlSessionTemplate")
+@MapperScan(basePackages = "com.neo.mapper.one", sqlSessionTemplateRef = "oneSqlSessionTemplate")
 public class OneDataSourceConfig {
 
     @Bean(name = "oneSqlSessionFactory")

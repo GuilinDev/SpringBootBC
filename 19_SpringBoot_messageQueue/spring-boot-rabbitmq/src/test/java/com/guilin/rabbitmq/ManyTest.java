@@ -19,7 +19,7 @@ public class ManyTest {
 
     @Test
     public void oneToMany() throws Exception {
-        for (int i=0;i<100;i++){
+        for (int i = 0; i < 100; i++) {
             guilinSender.send(i);
         }
         Thread.sleep(10000l);
@@ -27,7 +27,7 @@ public class ManyTest {
 
     @Test
     public void manyToMany() throws Exception {
-        for (int i=0;i<100;i++){
+        for (int i = 0; i < 100; i++) {
             guilinSender.send(i);
             guilinSender2.send(i);
         }

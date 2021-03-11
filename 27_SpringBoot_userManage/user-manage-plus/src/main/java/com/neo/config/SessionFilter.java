@@ -34,18 +34,18 @@ public class SessionFilter implements Filter {
             return;
         }
 
-        System.out.println("request uri is : "+uri);
+        System.out.println("request uri is : " + uri);
         //不处理指定的action, jsp
         if (GreenUrlSet.contains(uri) || uri.contains("/verified/")) {
             log.debug("security filter, pass, " + request.getRequestURI());
             filterChain.doFilter(srequest, sresponse);
             return;
         }
-        String id=(String)request.getSession().getAttribute(WebConfiguration.LOGIN_KEY);
-        if(StringUtils.isEmpty(id)){
-        	String html = "<script type=\"text/javascript\">window.location.href=\"/toLogin\"</script>";
+        String id = (String) request.getSession().getAttribute(WebConfiguration.LOGIN_KEY);
+        if (StringUtils.isEmpty(id)) {
+            String html = "<script type=\"text/javascript\">window.location.href=\"/toLogin\"</script>";
             sresponse.getWriter().write(html);
-        }else {
+        } else {
             filterChain.doFilter(srequest, sresponse);
         }
     }

@@ -33,11 +33,11 @@ public class UserController {
 
     @RequestMapping("/list")
     // JPA 依赖 Pageable 为用户列表页做分页，默认每页展示 6 个用户，并且按照用户注册的倒序来排列
-    public String list(Model model,@RequestParam(value = "page", defaultValue = "0") Integer page,
+    public String list(Model model, @RequestParam(value = "page", defaultValue = "0") Integer page,
                        @RequestParam(value = "size", defaultValue = "6") Integer size) {
         Sort sort = new Sort(Sort.Direction.DESC, "id");
         Pageable pageable = PageRequest.of(page, size, sort);
-        Page<User> users=userRepository.findList(pageable);
+        Page<User> users = userRepository.findList(pageable);
         model.addAttribute("users", users);
         return "user/list";
     }
@@ -49,49 +49,49 @@ public class UserController {
 
     @RequestMapping("/add")
     public String add(@Valid UserParam userParam, BindingResult result, Model model) {
-        String errorMsg="";
-        if(result.hasErrors()) {
+        String errorMsg = "";
+        if (result.hasErrors()) {
             List<ObjectError> list = result.getAllErrors();
             for (ObjectError error : list) {
-                errorMsg=errorMsg + error.getCode() + "-" + error.getDefaultMessage() +";";
+                errorMsg = errorMsg + error.getCode() + "-" + error.getDefaultMessage() + ";";
             }
-            model.addAttribute("errorMsg",errorMsg);
+            model.addAttribute("errorMsg", errorMsg);
             return "user/userAdd";
         }
-        User u= userRepository.findByUserName(userParam.getUserName());
-        if(u!=null){
-            model.addAttribute("errorMsg","用户已存在!");
+        User u = userRepository.findByUserName(userParam.getUserName());
+        if (u != null) {
+            model.addAttribute("errorMsg", "用户已存在!");
             return "user/userAdd";
         }
-        User user=new User();
-        BeanUtils.copyProperties(userParam,user);
+        User user = new User();
+        BeanUtils.copyProperties(userParam, user);
         user.setRegTime(new Date());
         userRepository.save(user);
         return "redirect:/list";
     }
 
     @RequestMapping("/toEdit")
-    public String toEdit(Model model,Long id) {
-        User user=userRepository.findById((long)id);
+    public String toEdit(Model model, Long id) {
+        User user = userRepository.findById((long) id);
         model.addAttribute("user", user);
         return "user/userEdit";
     }
 
     @RequestMapping("/edit")
-    public String edit(@Valid UserParam userParam, BindingResult result,Model model) {
-        String errorMsg="";
-        if(result.hasErrors()) {
+    public String edit(@Valid UserParam userParam, BindingResult result, Model model) {
+        String errorMsg = "";
+        if (result.hasErrors()) {
             List<ObjectError> list = result.getAllErrors();
             for (ObjectError error : list) {
-                errorMsg=errorMsg + error.getCode() + "-" + error.getDefaultMessage() +";";
+                errorMsg = errorMsg + error.getCode() + "-" + error.getDefaultMessage() + ";";
             }
-            model.addAttribute("errorMsg",errorMsg);
+            model.addAttribute("errorMsg", errorMsg);
             model.addAttribute("user", userParam);
             return "user/userEdit";
         }
 
-        User user=new User();
-        BeanUtils.copyProperties(userParam,user);
+        User user = new User();
+        BeanUtils.copyProperties(userParam, user);
         user.setRegTime(new Date());
         userRepository.save(user);
         return "redirect:/list";

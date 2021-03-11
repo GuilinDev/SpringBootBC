@@ -12,7 +12,7 @@ public interface UserMapper {
 
     @Select("SELECT * FROM users")
     @Results({
-            @Result(property = "userSex",  column = "user_sex", javaType = UserSexEnum.class),
+            @Result(property = "userSex", column = "user_sex", javaType = UserSexEnum.class),
             @Result(property = "nickName", column = "nick_name")
     })
     List<User> getAll();
@@ -31,7 +31,7 @@ public interface UserMapper {
 
     @Select("SELECT * FROM users WHERE id = #{id}")
     @Results({
-            @Result(property = "userSex",  column = "user_sex", javaType = UserSexEnum.class),
+            @Result(property = "userSex", column = "user_sex", javaType = UserSexEnum.class),
             @Result(property = "nickName", column = "nick_name")
     })
     User getOne(Long id);
@@ -43,12 +43,12 @@ public interface UserMapper {
     void update(User user);
 
     @Update({"<script> ",
-            "update users " ,
-            "<set>" ,
-            " <if test='userName != null'>userName=#{userName},</if>" ,
-            " <if test='nickName != null'>nick_name=#{nickName},</if>" ,
+            "update users ",
+            "<set>",
+            " <if test='userName != null'>userName=#{userName},</if>",
+            " <if test='nickName != null'>nick_name=#{nickName},</if>",
             " </set> ",
-            "where id=#{id} " ,
+            "where id=#{id} ",
             "</script>"})
     void updateUser(User user);
 

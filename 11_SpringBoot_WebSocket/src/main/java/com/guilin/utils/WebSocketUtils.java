@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- *  WebSocketUtils 工具类，用来存储聊天室在线的用户信息，以及发送消息的功能
+ * WebSocketUtils 工具类，用来存储聊天室在线的用户信息，以及发送消息的功能
  */
 public final class WebSocketUtils {
 

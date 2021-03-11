@@ -8,7 +8,7 @@ import javax.jms.Queue;
 import javax.jms.Topic;
 
 @Component
-public class Producer{
+public class Producer {
 
     @Autowired
     //JmsMessagingTemplate 是 Spring 提供发送消息的工具类，使用 JmsMessagingTemplate 和创建好的 queue 对消息进行发送
@@ -21,12 +21,12 @@ public class Producer{
     private Topic topic;
 
     public void sendQueue(String msg) {
-        System.out.println("send queue msg :"+msg);
+        System.out.println("send queue msg :" + msg);
         this.jmsMessagingTemplate.convertAndSend(this.queue, msg);
     }
 
     public void sendTopic(String msg) {
-        System.out.println("send topic msg :"+msg);
+        System.out.println("send topic msg :" + msg);
         this.jmsMessagingTemplate.convertAndSend(this.topic, msg);
     }
 }

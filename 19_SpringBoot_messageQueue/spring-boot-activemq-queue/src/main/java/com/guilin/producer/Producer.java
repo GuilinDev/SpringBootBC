@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import javax.jms.Queue;
 
 @Component
-public class Producer{
+public class Producer {
 
     @Autowired
     private JmsMessagingTemplate jmsMessagingTemplate;

@@ -19,7 +19,7 @@ import java.util.List;
 
 public class CustomersInterfaceImpl implements CustomersInterface {
 
-    Logger logger= LoggerFactory.getLogger(this.getClass());
+    Logger logger = LoggerFactory.getLogger(this.getClass());
     @Autowired
     private CustomerRepository customerRepository;
 

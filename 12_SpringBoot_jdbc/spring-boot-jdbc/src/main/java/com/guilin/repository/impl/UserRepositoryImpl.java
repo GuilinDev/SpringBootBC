@@ -44,7 +44,7 @@ public class UserRepositoryImpl implements UserRepository {
     public User findById(long id) {
         return jdbcTemplate.queryForObject("SELECT * FROM users WHERE id=?",
                 // 对返回的数据进行封装，它可自动将一行数据映射到指定类的实例中，首先将这个类实例化，然后通过名称匹配的方式，映射到属性中去
-                new Object[]{ id }, new BeanPropertyRowMapper<>(User.class));
+                new Object[]{id}, new BeanPropertyRowMapper<>(User.class));
     }
 
     /**

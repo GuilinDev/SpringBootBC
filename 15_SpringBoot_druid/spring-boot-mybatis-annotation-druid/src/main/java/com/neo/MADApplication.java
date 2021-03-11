@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @MapperScan("com.neo.mapper")
 public class MADApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(MADApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(MADApplication.class, args);
+    }
 }

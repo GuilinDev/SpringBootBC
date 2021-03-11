@@ -14,12 +14,13 @@ public class MultiDataSourceConfig {
     @Primary
     @Bean(name = "oneDataSource")
     @ConfigurationProperties("spring.datasource.druid.one")
-    public DataSource dataSourceOne(){
+    public DataSource dataSourceOne() {
         return DruidDataSourceBuilder.create().build();
     }
+
     @Bean(name = "twoDataSource")
     @ConfigurationProperties("spring.datasource.druid.two")
-    public DataSource dataSourceTwo(){
+    public DataSource dataSourceTwo() {
         return DruidDataSourceBuilder.create().build();
     }
 }

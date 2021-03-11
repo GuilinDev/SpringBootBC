@@ -36,19 +36,19 @@ public class UserMapperTest {
     public void testQuery() throws Exception {
 //		List<User> users = userMapper.getAll();
 //		List<User> users = userMapper.getListByUserSex("MAN");
-        Map param=  new HashMap();
-        param.put("username","aa");
-        param.put("user_sex","MAN");
+        Map param = new HashMap();
+        param.put("username", "aa");
+        param.put("user_sex", "MAN");
         List<User> users = userMapper.getListByNameAndSex(param);
 
-        System.out.println("testQuery:"+users.toString());
+        System.out.println("testQuery:" + users.toString());
     }
 
 
     @Test
     public void testUpdate() throws Exception {
         User user = userMapper.getOne(2L);
-        System.out.println("user :"+user.toString());
+        System.out.println("user :" + user.toString());
         user.setNickName("infrared");
         user.setUserName("guilin");
 //		userMapper.update(user);
@@ -59,13 +59,13 @@ public class UserMapperTest {
 
     @Test
     public void testPage() {
-        UserParam userParam=new UserParam();
+        UserParam userParam = new UserParam();
         userParam.setUserSex("WOMAN");
 //		userParam.setUserName("neo");
         userParam.setCurrentPage(0);
-        List<User> users=userMapper.getList(userParam);
-        long count=userMapper.getCount(userParam);
-        Page page = new Page(userParam,count,users);
-        System.out.println("page === "+page);
+        List<User> users = userMapper.getList(userParam);
+        long count = userMapper.getCount(userParam);
+        Page page = new Page(userParam, count, users);
+        System.out.println("page === " + page);
     }
 }

@@ -19,17 +19,17 @@ public class MailController {
 
     @RequestMapping("/sendSimpleMail")
     public MailResult sendSimpleMail(String to, String subject, String content) {
-        MailResult result=new MailResult();
-        if(StringUtils.isEmpty(to) || !to.contains("@")){
+        MailResult result = new MailResult();
+        if (StringUtils.isEmpty(to) || !to.contains("@")) {
             result.setRspCode("01");
             result.setRspCode("手机人邮件格式不正确");
         }
-        if(StringUtils.isEmpty(content) ){
+        if (StringUtils.isEmpty(content)) {
             result.setRspCode("03");
             result.setRspCode("邮件正文不能为空");
         }
         try {
-            mailService.sendSimpleMail(to,subject,content);
+            mailService.sendSimpleMail(to, subject, content);
             logger.info("简单邮件已经发送。");
         } catch (Exception e) {
             result.setRspCode("04");

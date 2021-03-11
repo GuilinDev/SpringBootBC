@@ -24,7 +24,7 @@ public class MemcachedBuilder {
     private XMemcachedProperties xMemcachedProperties;
 
     @Bean
-    public  MemcachedClient getMemcachedClient() {
+    public MemcachedClient getMemcachedClient() {
         MemcachedClient memcachedClient = null;
         try {
             MemcachedClientBuilder builder = new XMemcachedClientBuilder(AddrUtil.getAddresses(xMemcachedProperties.getServers()));
@@ -47,7 +47,7 @@ public class MemcachedBuilder {
             builder.setCommandFactory(new BinaryCommandFactory());
             memcachedClient = builder.build();
         } catch (IOException e) {
-            logger.error("inint MemcachedClient failed ",e);
+            logger.error("inint MemcachedClient failed ", e);
         }
         return memcachedClient;
     }

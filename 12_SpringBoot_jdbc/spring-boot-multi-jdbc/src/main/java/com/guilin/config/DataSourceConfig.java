@@ -11,7 +11,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import javax.sql.DataSource;
 
 /**
- *  根据特定的前缀加载不同的数据源
+ * 根据特定的前缀加载不同的数据源
  */
 
 @Configuration
@@ -32,14 +32,14 @@ public class DataSourceConfig {
         return DataSourceBuilder.create().build();
     }
 
-    @Bean(name="primaryJdbcTemplate")
-    public JdbcTemplate primaryJdbcTemplate (
-            @Qualifier("primaryDataSource")  DataSource dataSource ) {
+    @Bean(name = "primaryJdbcTemplate")
+    public JdbcTemplate primaryJdbcTemplate(
+            @Qualifier("primaryDataSource") DataSource dataSource) {
         return new JdbcTemplate(dataSource);
     }
 
-    @Bean(name="secondaryJdbcTemplate")
-    public JdbcTemplate secondaryJdbcTemplate (@Qualifier("secondaryDataSource") DataSource dataSource) {
+    @Bean(name = "secondaryJdbcTemplate")
+    public JdbcTemplate secondaryJdbcTemplate(@Qualifier("secondaryDataSource") DataSource dataSource) {
         return new JdbcTemplate(dataSource);
     }
 }

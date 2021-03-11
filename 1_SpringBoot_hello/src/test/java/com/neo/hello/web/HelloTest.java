@@ -29,13 +29,13 @@ public class HelloTest {
     @Test
     public void getHello() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.post("/hello?name=小明")
-        .accept(MediaType.APPLICATION_JSON_UTF8)).andDo(print());//设置json编码，避免中文乱码
+                .accept(MediaType.APPLICATION_JSON_UTF8)).andDo(print());//设置json编码，避免中文乱码
     }
 
     @Test
     public void getHello2() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.post("/hello?name=testName")
-        .accept(MediaType.APPLICATION_JSON_UTF8)).andExpect(MockMvcResultMatchers.content()
+                .accept(MediaType.APPLICATION_JSON_UTF8)).andExpect(MockMvcResultMatchers.content()
                 .string(Matchers.containsString("testName")));//包含字串也可以
     }
 }

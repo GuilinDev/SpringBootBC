@@ -16,31 +16,31 @@ import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
 @Configuration
 public class MultipleMongoConfig {
 
-	@Autowired
+    @Autowired
     private MultipleMongoProperties mongoProperties;
 
-	@Primary
-	@Bean(name = "primaryMongoTemplate")
-	public MongoTemplate primaryMongoTemplate() throws Exception {
-		return new MongoTemplate(primaryFactory(this.mongoProperties.getPrimary()));
-	}
-
-	@Bean
-	@Qualifier("secondaryMongoTemplate")
-	public MongoTemplate secondaryMongoTemplate() throws Exception {
-        return new MongoTemplate(secondaryFactory(this.mongoProperties.getSecondary()));
-	}
-
-	@Bean
     @Primary
-	public MongoDbFactory primaryFactory(MongoProperties mongo) throws Exception {
-		MongoClient client = new MongoClient(new MongoClientURI(mongoProperties.getPrimary().getUri()));
-		return new SimpleMongoDbFactory(client, mongoProperties.getPrimary().getDatabase());
-	}
+    @Bean(name = "primaryMongoTemplate")
+    public MongoTemplate primaryMongoTemplate() throws Exception {
+        return new MongoTemplate(primaryFactory(this.mongoProperties.getPrimary()));
+    }
 
-	@Bean
-	public MongoDbFactory secondaryFactory(MongoProperties mongo) throws Exception {
-		MongoClient client = new MongoClient(new MongoClientURI(mongoProperties.getSecondary().getUri()));
-		return new SimpleMongoDbFactory(client, mongoProperties.getSecondary().getDatabase());
-	}
+    @Bean
+    @Qualifier("secondaryMongoTemplate")
+    public MongoTemplate secondaryMongoTemplate() throws Exception {
+        return new MongoTemplate(secondaryFactory(this.mongoProperties.getSecondary()));
+    }
+
+    @Bean
+    @Primary
+    public MongoDbFactory primaryFactory(MongoProperties mongo) throws Exception {
+        MongoClient client = new MongoClient(new MongoClientURI(mongoProperties.getPrimary().getUri()));
+        return new SimpleMongoDbFactory(client, mongoProperties.getPrimary().getDatabase());
+    }
+
+    @Bean
+    public MongoDbFactory secondaryFactory(MongoProperties mongo) throws Exception {
+        MongoClient client = new MongoClient(new MongoClientURI(mongoProperties.getSecondary().getUri()));
+        return new SimpleMongoDbFactory(client, mongoProperties.getSecondary().getDatabase());
+    }
 }

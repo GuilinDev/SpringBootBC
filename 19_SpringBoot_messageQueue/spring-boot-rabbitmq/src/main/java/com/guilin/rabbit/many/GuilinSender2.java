@@ -11,7 +11,7 @@ public class GuilinSender2 {
     private AmqpTemplate rabbitTemplate;
 
     public void send(int i) {
-        String context = "spirng boot guilin queue"+" ****** "+i;
+        String context = "spirng boot guilin queue" + " ****** " + i;
         System.out.println("Sender2 : " + context);
         this.rabbitTemplate.convertAndSend("guilin", context);
     }

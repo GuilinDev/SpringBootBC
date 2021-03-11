@@ -36,7 +36,7 @@ public class UserRepositoryTests {
 
     @Test
     public void testQueryOne() {
-        User user=userRepository.findById(2L);
+        User user = userRepository.findById(2L);
         System.out.println("user == " + user.toString());
     }
 

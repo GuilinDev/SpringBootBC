@@ -8,7 +8,7 @@ public class Consumer {
 
     @JmsListener(destination = "guilin.topic")
     public void receiveTopic(String text) {
-        System.out.println("Consumer topic msg : "+text);
+        System.out.println("Consumer topic msg : " + text);
     }
 
 }

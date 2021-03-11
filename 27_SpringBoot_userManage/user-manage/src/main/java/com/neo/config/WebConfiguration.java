@@ -9,8 +9,8 @@ import javax.servlet.Filter;
 @Configuration
 public class WebConfiguration {
 
-    public static final String LOGIN_KEY="LOGIN_SESSION_KEY";
-    public static final String LOGIN_USER="LOGIN_SESSION_USER";
+    public static final String LOGIN_KEY = "LOGIN_SESSION_KEY";
+    public static final String LOGIN_USER = "LOGIN_SESSION_USER";
 
     @Bean(name = "sessionFilter")
     public Filter sessionFilter() {

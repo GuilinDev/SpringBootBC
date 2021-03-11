@@ -12,16 +12,15 @@ import java.util.List;
 
 @RestController
 public class UserController {
-	
-	@Autowired
-	private UserRepository userRepository;
-	
-	@RequestMapping("/getUsers")
-	public List<User> getUsers() {
-		List<User> users=userRepository.findAll();
-		return users;
-	}
+
+    @Autowired
+    private UserRepository userRepository;
+
+    @RequestMapping("/getUsers")
+    public List<User> getUsers() {
+        List<User> users = userRepository.findAll();
+        return users;
+    }
 
 
-    
 }

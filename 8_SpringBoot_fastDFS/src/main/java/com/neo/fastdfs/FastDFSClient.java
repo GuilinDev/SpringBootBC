@@ -73,14 +73,14 @@ public class FastDFSClient {
     private static StorageClient getStorageClient() throws IOException {
         TrackerServer trackerServer = getTrackerServer();
         StorageClient storageClient = new StorageClient(trackerServer, null);
-        return  storageClient;
+        return storageClient;
     }
 
     // 获取tracker server的方法
     private static TrackerServer getTrackerServer() throws IOException {
         TrackerClient trackerClient = new TrackerClient();
         TrackerServer trackerServer = trackerClient.getConnection();
-        return  trackerServer;
+        return trackerServer;
     }
 
     // 根据groupName（卷名） 和文件名获取文件信息
@@ -112,13 +112,13 @@ public class FastDFSClient {
     }
 
     //删除文件
-    public static void deleteFile(String groupName, String remoteFileName) throws Exception{
+    public static void deleteFile(String groupName, String remoteFileName) throws Exception {
         StorageClient storageClient = getStorageClient();
         int i = storageClient.delete_file(groupName, remoteFileName);
         logger.info("delete file successfully!!! " + i);
     }
 
     public static String getTrackerUrl() throws IOException {
-        return "http://"+getTrackerServer().getInetSocketAddress().getHostString()+":"+ClientGlobal.getG_tracker_http_port()+"/";
+        return "http://" + getTrackerServer().getInetSocketAddress().getHostString() + ":" + ClientGlobal.getG_tracker_http_port() + "/";
     }
 }

@@ -32,9 +32,9 @@ public class User1MapperTest {
     @Test
     public void testQuery() throws Exception {
         List<User> users = userMapper.getAll();
-        if(users==null || users.size()==0){
+        if (users == null || users.size() == 0) {
             System.out.println("is null");
-        }else{
+        } else {
             System.out.println(users.size());
         }
     }

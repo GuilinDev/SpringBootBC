@@ -10,7 +10,10 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     @Query("select u from User u")
     Page<User> findList(Pageable pageable);
+
     User findById(long id);
+
     User findByUserName(String userName);
+
     void deleteById(Long id);
 }

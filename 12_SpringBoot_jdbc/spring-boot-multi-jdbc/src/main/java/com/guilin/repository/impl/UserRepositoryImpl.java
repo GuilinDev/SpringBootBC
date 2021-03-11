@@ -29,8 +29,8 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public int update(User user, JdbcTemplate jdbcTemplate) {
-        if(jdbcTemplate==null){
-            jdbcTemplate= primaryJdbcTemplate;
+        if (jdbcTemplate == null) {
+            jdbcTemplate = primaryJdbcTemplate;
         }
         return jdbcTemplate.update("UPDATE users SET name = ? , password = ? , age = ? WHERE id = ?",
                 user.getName(), user.getPassword(), user.getAge(), user.getId());
@@ -38,27 +38,27 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public int delete(long id, JdbcTemplate jdbcTemplate) {
-        if(jdbcTemplate==null){
-            jdbcTemplate= primaryJdbcTemplate;
+        if (jdbcTemplate == null) {
+            jdbcTemplate = primaryJdbcTemplate;
         }
-        return jdbcTemplate.update("DELETE FROM users where id = ? ",id);
+        return jdbcTemplate.update("DELETE FROM users where id = ? ", id);
     }
 
     @Override
     public List<User> findALL(JdbcTemplate jdbcTemplate) {
-        if(jdbcTemplate==null){
-            jdbcTemplate= primaryJdbcTemplate;
+        if (jdbcTemplate == null) {
+            jdbcTemplate = primaryJdbcTemplate;
         }
         return jdbcTemplate.query("SELECT * FROM users", new UserRowMapper());
     }
 
     @Override
     public User findById(long id, JdbcTemplate jdbcTemplate) {
-        if(jdbcTemplate==null){
-            jdbcTemplate= primaryJdbcTemplate;
+        if (jdbcTemplate == null) {
+            jdbcTemplate = primaryJdbcTemplate;
         }
         return jdbcTemplate.queryForObject("SELECT * FROM users WHERE id=?",
-                new Object[] { id },
+                new Object[]{id},
                 new BeanPropertyRowMapper<>(User.class));
     }
 

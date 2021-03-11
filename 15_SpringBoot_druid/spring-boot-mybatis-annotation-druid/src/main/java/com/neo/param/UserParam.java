@@ -1,6 +1,6 @@
 package com.neo.param;
 
-public class UserParam extends PageParam{
+public class UserParam extends PageParam {
 
     private String userName;
 

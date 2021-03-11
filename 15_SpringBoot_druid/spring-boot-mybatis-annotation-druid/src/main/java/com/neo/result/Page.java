@@ -41,7 +41,7 @@ public class Page<E> implements Serializable {
                 / pageSize : totalNumber / pageSize + 1;
     }
 
-    public Page(PageParam pageParam, long totalNumber, List<E> list){
+    public Page(PageParam pageParam, long totalNumber, List<E> list) {
         super();
         this.currentPage = pageParam.getCurrentPage();
         this.totalNumber = totalNumber;

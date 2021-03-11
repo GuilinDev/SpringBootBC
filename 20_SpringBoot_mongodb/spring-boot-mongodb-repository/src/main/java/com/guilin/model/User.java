@@ -1,6 +1,6 @@
 package com.guilin.model;
 
-public class User  {
+public class User {
     private Long id;
     private String userName;
     private String passWord;

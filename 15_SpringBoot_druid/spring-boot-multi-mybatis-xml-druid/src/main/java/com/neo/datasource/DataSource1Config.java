@@ -17,7 +17,7 @@ import javax.sql.DataSource;
 
 
 @Configuration
-@MapperScan(basePackages = "com.neo.mapper.test1", sqlSessionTemplateRef  = "test1SqlSessionTemplate")
+@MapperScan(basePackages = "com.neo.mapper.test1", sqlSessionTemplateRef = "test1SqlSessionTemplate")
 public class DataSource1Config {
 
 

@@ -8,7 +8,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
+
 import static org.assertj.core.api.Assertions.assertThat;
+
 import org.springframework.boot.test.rule.OutputCapture;
 
 @RunWith(SpringRunner.class)
@@ -20,7 +22,7 @@ public class HelloServiceTest {
     HelloService helloService;
 
     @Test
-    public void  sayHelloTest(){
+    public void sayHelloTest() {
         helloService.sayHello();
         assertThat(this.outputCapture.toString().contains("hello service")).isTrue();
     }

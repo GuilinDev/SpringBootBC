@@ -37,7 +37,7 @@ public class MessageControllerTest {
         params.add("summary", "summary");
         // MockMvcRequestBuilders.post 代表使用 post 请求。
         String mvcResult = mockMvc.perform(MockMvcRequestBuilders.post("/message")
-        .params(params)).andReturn().getResponse().getContentAsString();
+                .params(params)).andReturn().getResponse().getContentAsString();
 
         System.out.println("Result === " + mvcResult);
     }
@@ -50,7 +50,7 @@ public class MessageControllerTest {
             params.add("summary", "summary" + i);
             try {
                 MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.post("/message")
-                .params(params)).andReturn();
+                        .params(params)).andReturn();
             } catch (Exception e) {
                 e.printStackTrace();
             }

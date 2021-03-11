@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %><html lang="en">
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<html lang="en">
 <body>
 <h3>一行 Java 代码</h3>
 <p>
@@ -11,7 +12,7 @@
 <p>
     你的 IP 地址是：
     <%
-        out.println("Your IP address is " + request.getRemoteAddr()+"</br>");
+        out.println("Your IP address is " + request.getRemoteAddr() + "</br>");
         out.println("一段代码 ");
     %>
 </p>
@@ -36,17 +37,17 @@
 
 <h3>For 循环实例</h3>
 <%
-    int count = (int)session.getAttribute("count");
-    for ( int fontSize = 1; fontSize <=count; fontSize++){
+    int count = (int) session.getAttribute("count");
+    for (int fontSize = 1; fontSize <= count; fontSize++) {
 %>
 纯洁的微笑
-<br />
+<br/>
 <%}%>
 
 
 <h3>布局</h3>
 
-<%@include file="footer.jsp"%>
+<%@include file="footer.jsp" %>
 
 </body>
 </html>

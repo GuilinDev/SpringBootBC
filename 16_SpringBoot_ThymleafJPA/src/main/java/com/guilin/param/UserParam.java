@@ -8,7 +8,7 @@ import javax.validation.constraints.NotEmpty;
 
 public class UserParam {
     private long id;
-    @NotEmpty(message="Name can't be null")
+    @NotEmpty(message = "Name can't be null")
     private String userName;
     @NotEmpty(message = "Password can't be null")
     @Length(min = 6, message = "Passwrod length must at least 6")
