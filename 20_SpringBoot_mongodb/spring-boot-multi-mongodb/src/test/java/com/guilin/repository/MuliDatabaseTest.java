@@ -27,8 +27,8 @@ public class MuliDatabaseTest {
         System.out.println("************************************************************");
         System.out.println("测试开始");
         System.out.println("************************************************************");
-        this.primaryRepository.save(new User("小张", "123456"));
-        this.secondaryRepository.save(new User("小王", "654321"));
+        this.primaryRepository.save(new User("I1", "12345679"));
+        this.secondaryRepository.save(new User("I2", "87654321"));
         List<User> primaries = this.primaryRepository.findAll();
         for (User primary : primaries) {
             System.out.println(primary.toString());
