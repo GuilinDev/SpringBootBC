@@ -37,7 +37,7 @@ public class IdempotenceTests {
         for (int i = 0; i < 5; i++) {
             log.info("the {}th calling endpoint", i);
             // call endpoint and print result
-            String result = mockMvc.perform(MockMvcRequestBuilders.post("/test")
+            String result = mockMvc.perform(MockMvcRequestBuilders.post("/testToken")
                 .header("token", token)
                 .accept(MediaType.TEXT_HTML))
                     .andReturn()

@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
@@ -18,7 +19,7 @@ public class TokenController {
      * get Token Endpoint
      * @return Token String
      */
-    @GetMapping("/token")
+    @RequestMapping("/token")
     public String getToken() {
         // mimic user info
         String userInfo = "myIdempotence";
@@ -31,6 +32,7 @@ public class TokenController {
      * @param token idempotent strings
      * @return execute true or false
      */
+    @RequestMapping("/testToken")
     public String test(@RequestHeader(value = "token")String token) {
         // for testing purpose, use the same mimic userinfo
         String userInfo = "myIdempotence";
