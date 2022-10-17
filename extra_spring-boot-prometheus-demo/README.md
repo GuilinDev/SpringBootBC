@@ -115,19 +115,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 
 ## Contact
-Project Link: [https://github.com/cutePanda123/spring-boot-prometheus-demo](https://github.com/cutePanda123/spring-boot-prometheus-demo)
+Project Link: 
 
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/cutePanda123/spring-boot-prometheus-demo.svg?style=for-the-badge
-[contributors-url]: https://github.com/cutePanda123/spring-boot-prometheus-demo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/cutePanda123/spring-boot-prometheus-demo.svg?style=for-the-badge
-[forks-url]: https://github.com/cutePanda123/spring-boot-prometheus-demo/network/members
-[stars-shield]: https://img.shields.io/github/stars/cutePanda123/spring-boot-prometheus-demo.svg?style=for-the-badge
-[stars-url]: https://github.com/cutePanda123/spring-boot-prometheus-demo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/cutePanda123/spring-boot-prometheus-demo.svg?style=for-the-badge
-[issues-url]: https://github.com/cutePanda123/spring-boot-prometheus-demo/issues
-[license-shield]: https://img.shields.io/github/license/cutePanda123/spring-boot-prometheus-demo.svg?style=for-the-badge
-[license-url]: https://github.com/cutePanda123/spring-boot-prometheus-demo/blob/master/LICENSE.txt
 
