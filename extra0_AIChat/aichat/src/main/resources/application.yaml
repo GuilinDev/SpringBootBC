@@ -1,0 +1,15 @@
+server:
+  port: 8090
+spring:
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      embedding:
+        model: gemma:7b
+      chat:
+        model: gemma:7b
+    openai:
+      api-key:
+    chat:
+      options:
+        model: gpt-4
