@@ -1,0 +1,17 @@
+global:
+  resolve_timeout: 5m
+
+route:
+  receiver: 'default-receiver'
+
+receivers:
+  - name: 'default-receiver'
+    email_configs:
+      - to: 'guilindev@gmail.com'
+        from: 'guilindev@gmail.com'
+        smarthost: 'smtp.example.com:587'
+        auth_username: 'example-smtp-username'
+        auth_password: 'example-smtp-password'
+        auth_identity: 'guilindev@gmail.com'
+
+# In a real setup, need to replace the above email_configs with actual email server details

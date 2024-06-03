@@ -1,0 +1,11 @@
+groups:
+  - name: example
+    rules:
+      - alert: HighMemoryUsage
+        expr: node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes * 100 > 10
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Node memory is running high"
+          description: "Node memory is above 10% available (current value: {{ $value }}%)"
